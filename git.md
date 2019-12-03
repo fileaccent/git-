@@ -234,3 +234,51 @@
   git merge --no-ff -m "通过 --no-ff 合并分支" dev
 
   这样合并分支时.会创建一个commit 提示曾经合并过
+
+  #### 分支管理:
+
+  master 分支不干活
+
+  dev 分支用于储存最新的版本
+
+  其他人通过其他分支操作,提交时合并到dev分支,
+  最后一版产品上线,再合并到master分支.
+
+  ### 通过添加分支修复bug
+
+  假如这时在dev上的工作还没有完成,那么可以使用
+
+  git stash 将修改的内容暂时保存
+
+  git stash list 查看存储的信息
+
+  这是用 git status 查看工作区是干净的
+
+  这时切换到master分支修复bug
+
+  git checkout master
+
+  git checkout -b issue-011
+
+  git add .
+
+  git commit 
+
+  git checkout master
+
+  git checkout issue-011
+
+  git checkout -d issue-011
+
+  git checkout dev
+
+  git stash pop
+  
+  (这条命令将之前储存在stash中的修改读出来,这样就可以继续工作)
+
+  也可以使用
+
+  git stash apply 读取数据,不过要手动删除git stash 中的数据
+
+  git stash drop 删除git stash存储的信息
+
