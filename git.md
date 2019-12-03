@@ -76,7 +76,7 @@
 
   #### 回退版本
 
-  git reset --hard HEAD^ // 回退到上一版本
+  git reset --hard HEAD^ // (添加冲突)回退到上一版本
 
   git reset --hard <commit id> // 回退到指定的版本
 
