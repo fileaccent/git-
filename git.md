@@ -234,3 +234,5 @@
   git merge --no-ff -m "通过 --no-ff 合并分支" dev
 
   这样合并分支时.会创建一个commit 提示曾经合并过
+
+  <span style="color:rgb(144, 24, 89)">这里是修复的bug</span>
