@@ -126,15 +126,15 @@
 
   本地部分已完成
 
-  远端仓库
+  ### 远端仓库
 
   git 指的就是本地仓库.
 
   github 是一个git的服务器,帮助我们在网络上,保存我们的文件.
 
-  在 github 上创建一个远程的仓库
+  1. 将远程仓库和本地仓库连接,并将文件推到远端的步骤:
 
-  通过 
+  在 github 上创建一个远程的仓库
 
   git remote add origin <github仓库的网址> // 将git 本地仓库与 github 的远程仓库连接. 
 
@@ -143,3 +143,31 @@
   需要使用 
 
   git push -u origin master // 将本地文件推到远程仓库
+
+  2. 将远程仓库的文件,同步到本地的步骤:
+
+  在要同步的文件夹中,右键打开 git bash .
+
+  输入
+
+  git clone <网址> // 将远端的文件同步到本地
+
+  ### 分支
+
+  回到之前版本库的问题 
+
+  其中的HEAD指针,指向当前正在工作区的分支, 当调整分支时,工作区的文件也会改变
+
+  创建 dev 分支
+
+  git branch dev
+
+  切换到 dev 分支
+
+  git checkout dev
+
+  创建并切换分支
+
+  git checkout -b dev
+
+  git branch (查看当前分支)
