@@ -282,3 +282,4 @@
 
   git stash drop 删除git stash存储的信息
 
+  <span style="color:rgb(144, 24, 89)">这里是修复的bug</span>
