@@ -202,5 +202,35 @@
 
   git switch master
 
+  #### 解决冲突
+
+  下面是冲突的文字
+
   这是git中的 master 分支的语句
   这是git中的 dev 分支的语句
+
+  当我们合并时,提示冲突后,通过
+
+  git status
+
+  查看冲突是在那个文件
+
+  将冲突一个一个解决完后,再
+
+  git add .
+
+  git commit 
+
+  然后提交
+
+  git log --graph 
+
+  可以看到合并时的示意图
+
+  ### 分支管理策略
+
+  通过 --no-ff 方式的 git merge
+
+  git merge --no-ff -m "通过 --no-ff 合并分支" dev
+
+  这样合并分支时.会创建一个commit 提示曾经合并过
