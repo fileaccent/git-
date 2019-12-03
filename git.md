@@ -269,7 +269,7 @@
 
   git checkout issue-011
 
-  git checkout -d issue-011
+  git branch -d issue-011
 
   git checkout dev
 
@@ -279,7 +279,12 @@
 
   也可以使用
 
-  git stash apply 读取数据,不过要手动删除git stash 中的数据
+  git stash apply stash@{0}(即stash列表每行开头的标识)
+
+  读取数据,不过要手动删除git stash 中的数据
 
   git stash drop 删除git stash存储的信息
 
+  #### 只 merge 一个 commit
+
+  git cherry-pick <commit-id>
