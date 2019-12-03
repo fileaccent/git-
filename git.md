@@ -158,16 +158,46 @@
 
   其中的HEAD指针,指向当前正在工作区的分支, 当调整分支时,工作区的文件也会改变
 
-  创建 dev 分支
+  ####　创建 dev 分支
 
   git branch dev
 
-  切换到 dev 分支
+  ####　切换到 dev 分支
 
   git checkout dev
 
-  创建并切换分支
+  #### 创建并切换分支
 
   git checkout -b dev
 
-  git branch (查看当前分支)
+  #### git branch (查看当前分支)
+
+  分支也可以进行
+
+  git add
+
+  和 
+
+  git commit
+
+  可以编写与主分支不一样的部分
+
+  #### 合并分支
+
+  git merge dev
+
+  把 dev 分支的内容合并到当前分支
+
+  删除分支
+
+  git branch -d dev
+
+  #### git 的新命令 (在本人的电脑上无法使用)
+
+  创建并切换到新的 dev 分支
+
+  git switch -c dev
+
+  切换到已有的 master 分支
+
+  git switch master
