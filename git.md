@@ -296,11 +296,9 @@
   git branch -D <name>
 
   强制删除
-<<<<<<< Updated upstream
   
   模拟多人协作情况, 这是其他的开发者提交的内容
 =======
 
 
   ### 多人协作
->>>>>>> Stashed changes
