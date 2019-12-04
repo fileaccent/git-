@@ -365,3 +365,90 @@
   ```
   
   <span style="color:rgb(144,18,56);">建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；</span>
+
+  git rebase 可以把合并分支的图,变成一条整齐的直线
+
+  ### 标签
+
+  标签是为了我们能更加方便的找到,之前书写过的commit , 标签与commit相关联.
+
+   先切换到需要打标签的分支
+
+   git branch
+
+   git checkout <branchName>
+
+   然后
+
+   git tag <标签名>
+
+   git tag 可以查看所有的标签
+
+   这样标签会打到最后的那个commit
+
+   如果需要为之前的commit添加标签
+
+  git tag <标签名> <commit id>
+
+  标签是按字母排序,并不是按时间排序的
+
+
+  git show <标签名> (可以查看标签的全部信息)
+
+  还可以添加说明
+
+  git tag -a <标签名> -m "<描述>" <commit id>
+
+  命令git push origin <tagname> 可以推送一个本地标签；
+
+  命令git push origin --tags可以推送全部未推送过的本地标签；
+
+  命令git tag -d <tagname> 可以删除一个本地标签；
+
+  命令git push origin :refs/tags/<tagname> 可以删除一个远程标签。
+
+  如何参与一个开源项目呢？比如人气极高的bootstrap项目，这是一个非常强大的CSS框架，你可以访问它的项目主页https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone：
+
+  在GitHub上，可以任意Fork开源仓库；
+
+  自己拥有Fork后的仓库的读写权限；
+
+  可以推送pull request给官方仓库来贡献代码。
+
+  ### 使用码云
+
+  git remote add origin <码云上的网址>
+
+  如果报错需要删除与 github 仓库的连接
+
+  git remote -v 查看远程库信息
+
+  git remote rm origin
+
+  删除已有的 github仓库
+
+  git remote add  origin <码云上的git网址>
+
+  同时连接 github 和 码云
+
+  git remote add github <github仓库的网址>
+
+  git remote add gitee <gitee仓库的网址>
+
+  分别push到github或码云
+
+  git push github master
+
+  git push gitee master
+
+  ### git 自定义
+
+  #### 忽略特殊文件,用的时候再查
+
+  ####  配置别名
+
+  git config --global alias.st status
+
+  给 git status 命令起别名为 git st
+
+  ### git 学习到此结束!
