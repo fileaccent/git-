@@ -342,6 +342,20 @@
   git push origin master
 
   ## 第二种 修改的代码提交到工作区
+
+  这时你 
+
+  git push 的话,会报错提示有冲突, 提示你去 pull
+
+  git pull 之后你会在文件中看到冲突的标记,处理完冲突,记得保存
+
+  然后 git add .
+
+  git commit
+
+  git push 就可以了
+
+
   ```
   /* 这是冲突部分
   console.log('这是github上直接修改的(为了模拟冲突的产生)的代码!');
@@ -349,3 +363,5 @@
   */
   console.log('这是本地的(添加冲突)代码!');
   ```
+  
+  <span style="color:rgb(144,18,56);">建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；</span>
